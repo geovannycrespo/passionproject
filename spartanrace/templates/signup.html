@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Do you want to do our Race?</h1>
+
+<h2>Signup</h2>
+
+
+<form action="" method="POST">
+    {{ signupform.hidden_tag() }}
+    <div>
+        <fieldset>
+            {{ signupform.username.label }}
+            {{ signupform.username(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ signupform.email.label }}
+            {{ signupform.email(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{signupform.password.label }}
+            {{signupform.password(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ signupform.confirm_pass.label }}
+            {{ signupform.confirm_pass(class="form-control") }}
+        </fieldset>
+        {{signupform.submit(class="button") }}
+    </div>
+</form>
+<header class="photo">
+        <img src="https://d1gzvc2c13psez.cloudfront.net/sites/2/2016/03/150815ChicagoSuper_JDG0322.jpg">
+</header>
+
+
+
+
+{% endblock content %}
